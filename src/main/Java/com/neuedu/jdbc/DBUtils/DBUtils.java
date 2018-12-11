@@ -18,7 +18,7 @@ public class DBUtils {
            try {
                    resourceAsStream = Resources.getResourceAsStream("SqlConfig.xml");
                    SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
-                   SqlSession sqlSession = sqlSessionFactory.openSession(true);
+                   SqlSession sqlSession = sqlSessionFactory.openSession();
                    return sqlSession;
            } catch (IOException e) {
                    e.printStackTrace();
